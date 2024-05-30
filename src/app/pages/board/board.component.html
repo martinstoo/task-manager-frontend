@@ -1,7 +1,0 @@
-<div>
-  <button (click)="addBoard()">Add Board</button>
-  <div *ngFor="let board of boards">
-    <h3>{{ board.name }}</h3>
-    <app-table [board_id]="board.id"></app-table>
-  </div>
-</div>

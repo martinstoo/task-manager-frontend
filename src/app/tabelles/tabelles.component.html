@@ -1,0 +1,8 @@
+<div class="tabelles">
+  <input matInput placeholder="Tabelles Name" [(ngModel)]="tabellesName">
+  <button mat-raised-button color="primary" (click)="addTask()">Add Task</button>
+  <div *ngFor="let task of tasks">
+    <app-task></app-task>
+  </div>
+</div>
+

@@ -7,15 +7,15 @@ import { Observable } from 'rxjs';
 })
 
 export class TabellesService {
-  private tabellesUrl = 'http://localhost:9090/api/tabelles';
+  private tabellesUrl = 'http://localhost:9090/api/tabelless';
 
   constructor(private http: HttpClient) { }
 
-  getTabelles(): Observable<any> {
+  getTabelless(): Observable<any> {
     return this.http.get(`${this.tabellesUrl}`);
   }
 
-  addTabelles(tabelles: Object): Observable<Object> {
+  addTabelles(tabelles: any): Observable<any> {
     return this.http.post(`${this.tabellesUrl}`, tabelles);
   }
 }

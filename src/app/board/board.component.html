@@ -1,0 +1,7 @@
+<div class="board">
+  <input matInput placeholder="Board Name" [(ngModel)]="boardName">
+  <button mat-raised-button color="primary" (click)="addTabelles()">Add Tabelle</button>
+  <div *ngFor="let tabelles of tabelless">
+    <app-tabelles></app-tabelles>
+  </div>
+</div>
