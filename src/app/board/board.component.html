@@ -6,5 +6,7 @@
       <button class="buttons" mat-raised-button color="primary" (click)="confirmBoardName(board)">Confirm</button>
     </div>
     <div class="board-name" *ngIf="!board.editing">{{ board.name }}</div>
+    <hr id="the-line"*ngIf="!board.editing">
+    <app-tabelles *ngIf="!board.editing" [boardName]="board.name"></app-tabelles>
   </div>
 </div>

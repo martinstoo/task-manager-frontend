@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-tabelles',
@@ -6,10 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./tabelles.component.css']
 })
 export class TabellesComponent {
-  tabellesName: string = '';
-  tasks: number[] = [];
+  @Input() boardName: string;
 
-  addTask() {
-    this.tasks.push(this.tasks.length);
+  constructor() {
+    this.boardName = '';
+  }
+  
+  addTable() {
+    console.log('Add Table to Board:', this.boardName);
   }
 }

@@ -8,7 +8,4 @@ import { Component } from '@angular/core';
 export class AppComponent {
   boards: number[] = [];
 
-  addBoard() {
-    this.boards.push(this.boards.length);
-  }
 }
