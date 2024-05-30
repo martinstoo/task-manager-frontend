@@ -1,3 +1,4 @@
+
 import { Component, Input } from '@angular/core';
 
 @Component({
@@ -7,12 +8,13 @@ import { Component, Input } from '@angular/core';
 })
 export class TabellesComponent {
   @Input() boardName: string;
+  tabelless: { name: string }[] = [];
 
   constructor() {
     this.boardName = '';
   }
-  
-  addTable() {
-    console.log('Add Table to Board:', this.boardName);
+
+  addTabelles() {
+    this.tabelless.push({ name: '' });
   }
 }

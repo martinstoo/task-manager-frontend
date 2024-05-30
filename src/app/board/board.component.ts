@@ -5,6 +5,7 @@ import { Component } from '@angular/core';
   templateUrl: './board.component.html',
   styleUrls: ['./board.component.css']
 })
+
 export class BoardComponent {
   tabelless: { name: string, editing: boolean }[] = [];
 
