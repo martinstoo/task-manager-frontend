@@ -6,10 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./board.component.css']
 })
 export class BoardComponent {
-  boardName: string = '';
-  tabelless: number[] = [];
+  tabelless: { name: string, editing: boolean }[] = [];
 
   addTabelles() {
-    this.tabelless.push(this.tabelless.length);
+    this.tabelless.push({ name: '', editing: true });
+  }
+
+  confirmBoardName(board: { name: string, editing: boolean }) {
+    board.editing = false;
   }
 }

@@ -4,7 +4,7 @@ import { BoardComponent } from './board/board.component';
 
 const routes: Routes = [
   {
-    path: 'task-manager',
+    path: 'boards',
     pathMatch: 'full',
     component: BoardComponent
   }

@@ -1,44 +1,19 @@
-<!-- <div class="app-container">
-    <h1>Task Manager</h1>
-    <button mat-raised-button color="primary" (click)="addBoard()">Add Board</button>
-    <div *ngFor="let board of boards">
-      <app-board></app-board>
-    </div>
-  
-  </div>
-  <div class="app-container">
-  <h1>Task Manager</h1>
-  <button mat-raised-button color="primary" (click)="addBoard()">Add Board</button>
-  <div *ngFor="let board of boards">
-    <app-board></app-board>
-  </div>
-</div> -->
-
-
 <mat-toolbar>
-
   <button id="menu-button" [matMenuTriggerFor]="menu"></button>
-
   <mat-menu #menu="matMenu">
+    <button mat-menu-item [routerLink]="['']">
+      <span>Home</span>
+    </button>
     <button mat-menu-item [routerLink]="['boards']">
       <span>Boards</span>
     </button>
-
   </mat-menu>
-
   <span>Task Manager</span>
-
   <span class="toolbar__spacer"></span>
-
 </mat-toolbar>
 
 <div class="app-container">
-  <h1>Task Manager</h1>
-  <button mat-raised-button color="primary" (click)="addBoard()">Add Board</button>
-  <div *ngFor="let board of boards">
-    <app-board></app-board>
-  </div>
-
-<main>
-  <router-outlet></router-outlet>
-</main>
+  <main>
+    <router-outlet></router-outlet>
+  </main>
+</div>
