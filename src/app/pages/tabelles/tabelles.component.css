@@ -1,0 +1,25 @@
+* {
+    display: flex;
+    flex-direction: column;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.buttons {
+    flex-direction: row;
+    width: 120px;
+    align-self: center;
+    margin: 20px;
+}
+
+.tabelles-class {
+    width: 80px;
+    height: 60px;
+    flex-direction: row;
+    background-color: red;
+}
+
+.tabelles-container {
+    flex-wrap: wrap;
+    position: relative;
+  }
+  
