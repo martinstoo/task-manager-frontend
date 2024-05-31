@@ -7,7 +7,7 @@
 .buttons {
     flex-direction: row;
     width: 120px;
-    align-self: center;
+
     margin: 20px;
 }
 

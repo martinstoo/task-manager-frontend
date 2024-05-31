@@ -1,7 +1,5 @@
 
 <mat-toolbar>
-  <!-- <button mat-menu-item [routerLink]="['login']"></button> -->
-  
   <button id="menu-button" [matMenuTriggerFor]="menu"></button>
   <mat-menu #menu="matMenu">
     <button mat-menu-item [routerLink]="['']">
@@ -10,11 +8,13 @@
     <button mat-menu-item [routerLink]="['boards']">
       <span>Boards</span>
     </button>
-    <button>
-      <span>Logout</span>
-    </button>
   </mat-menu>
   <span>Task Manager</span>
+  <div class="logout-button" *ngIf="oauthService.hasValidAccessToken()">
+    <button (click)="logout()" color="warn" mat-button>
+      <mat-icon>logout</mat-icon>
+    </button>
+  </div>
   <span class="toolbar__spacer"></span>
 </mat-toolbar>
 

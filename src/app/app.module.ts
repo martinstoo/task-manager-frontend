@@ -28,8 +28,9 @@ import { AppAuthService } from './service/app.auth.service';
 import { LoginpageComponent } from './pages/loginpage/loginpage.component';
 import { LoginComponent } from './components/login/login.component';
 import { MatMenu, MatMenuModule } from '@angular/material/menu';
-
-
+import { TabellesComponent } from './pages/tabelles/tabelles.component';
+import { BoardComponent } from './pages/board/board.component';
+import { PeopleComponent } from './pages/people/people.component';
 
 export const authConfig: AuthConfig = {
   issuer: 'http://localhost:8080/realms/ILV',
@@ -54,10 +55,13 @@ export function storageFactory(): OAuthStorage {
 @NgModule({
   declarations: [
     AppComponent,
+    BoardComponent,
+    TabellesComponent,
     IsInRoleDirective,
     IsInRolesDirective,
     LoginpageComponent,
     LoginComponent,
+    PeopleComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,26 @@
+<h2>People</h2>
+
+<ul>
+  <li *ngFor="let person of peopleList">
+    <strong>Username:</strong> {{ person.username }}, 
+    <strong>Name:</strong> {{ person.firstName }} {{ person.lastName }}, 
+    <strong>Age:</strong> {{ person.age }}
+  </li>
+</ul>
+
+<h3>Add a new person:</h3>
+<form (ngSubmit)="addPerson()">
+  <label for="username">Username:</label>
+  <input type="text" id="username" [(ngModel)]="newPerson.username" name="username" required>
+  
+  <label for="firstName">First Name:</label>
+  <input type="text" id="firstName" [(ngModel)]="newPerson.firstName" name="firstName" required>
+
+  <label for="lastName">Last Name:</label>
+  <input type="text" id="lastName" [(ngModel)]="newPerson.lastName" name="lastName" required>
+
+  <label for="age">Age:</label>
+  <input type="number" id="age" [(ngModel)]="newPerson.age" name="age" required>
+
+  <button type="submit">Add Person</button>
+</form>

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { AppAuthService } from './service/app.auth.service';
+import { OAuthService } from 'angular-oauth2-oidc';
 
 @Component({
   selector: 'app-root',
@@ -8,9 +9,8 @@ import { AppAuthService } from './service/app.auth.service';
 })
 export class AppComponent {
   title = 'frontend';
-
-  constructor(private authService: AppAuthService) {
-  }
+  
+  public constructor(private authService: AppAuthService, public oauthService: OAuthService) {}
 
   public logout() {
     this.authService.logout();
